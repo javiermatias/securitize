@@ -8,6 +8,7 @@ import { WalletsModule } from './wallets/wallets.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('api');
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
   //Swagger Api documentation
   const config = new DocumentBuilder()
@@ -18,10 +19,12 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config, {
     include: [WalletsModule, ExchangeRatesModule],
   });
-  SwaggerModule.setup('api', app, document);
+  
+  SwaggerModule.setup('doc', app, document);
   //Catch some MongoDB errors
   app.useGlobalFilters(new MongoExceptionFilter());
   app.enableCors();
+ 
   await app.listen(3001);
 }
 bootstrap();
