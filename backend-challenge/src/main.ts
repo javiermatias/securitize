@@ -19,12 +19,12 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config, {
     include: [WalletsModule, ExchangeRatesModule],
   });
-  
-  SwaggerModule.setup('doc', app, document);
+
+  SwaggerModule.setup('api/doc', app, document);
   //Catch some MongoDB errors
   app.useGlobalFilters(new MongoExceptionFilter());
   app.enableCors();
- 
+
   await app.listen(3001);
 }
 bootstrap();
