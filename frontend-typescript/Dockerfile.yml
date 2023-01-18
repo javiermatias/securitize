@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:  
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: securitize-front
+    command: >
+      bash -c "
+      npm install 
+      && npm run start"
+    ports:
+    - "3000:3000"
+    tty: true
+    container_name: securitize-front
+
