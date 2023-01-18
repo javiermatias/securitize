@@ -3,7 +3,7 @@ Securitize Challenge
 
 NestJS Project
 
-Make sure you have teh last version of Node.js and npm (Node Package Manager) installed on your machine.<br>
+Make sure you have the last version of Node.js and npm (Node Package Manager) installed on your machine.<br>
 1.Run npm install to install all the necessary dependencies.<br>
 2.Run npm run start to start the development server.<br>
 3.The API will be available at http://localhost:3001/api <br>
