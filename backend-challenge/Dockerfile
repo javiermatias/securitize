@@ -1,5 +1,5 @@
 # Base image
-FROM node:18 As build-fixture
+FROM node:18 
 
 ARG deploy
 
