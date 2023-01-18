@@ -14,4 +14,5 @@ React Project
 <br><br>
 1.Run npm install to install all the necessary dependencies.<br>
 2.Run npm start to start the development server.<br>
-3.The application will be available at http://localhost:3000 in your browser.
+3.The application will be available at http://localhost:3000 in your browser.  
+URL :https://securitize.novanok.com/
